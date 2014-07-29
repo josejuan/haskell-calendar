@@ -1,0 +1,11 @@
+Simply use `renderCalendar` to generate a calendar providing *your own*
+render function.
+
+`renderCalendar` render all calendar cells from up/left to bottom/right:
+
+  | cell   1, cell   2, cell   3, ... , cell j |
+  | cell j+1, cell j+2, cell j+3, ...          |
+  | ...                                        |
+
+
+
