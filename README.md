@@ -110,9 +110,9 @@ Render to a graphical interface (e.g. <a href="https://hackage.haskell.org/packa
                      (foldPics $ \(x, ps) c -> let (w, p) = renderMonthRules c in (x + w, Translate x 0 p :ps))
         cols rows year month weeday
 
-with result
+with result (sorry for the scaled image)
 
-<img src="http://s9.postimg.org/vnx8o2y2n/calendar.png" />
+<img src="http://s24.postimg.org/8s5pz8n5x/calendar_gloss.png" />
 
 (see `examples` folder).
 
