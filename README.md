@@ -86,7 +86,7 @@ Render to HTML can be achieved writing
 
 with result
 
-    <img src="http://s9.postimg.org/vnx8o2y2n/calendar.png" />
+<img src="http://s9.postimg.org/vnx8o2y2n/calendar.png" />
 
 (see `examples` folder).
 
