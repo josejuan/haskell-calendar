@@ -17,11 +17,11 @@ dText w x c f t = Pictures [ Color (dark c) $ rectangleSolid w 1
                            , Color (light c) $ rectangleWire w 1
                            , Color f $ Translate (-x) (-0.25) $ scale 0.004 0.004 $ text t]
 
+foldPics f = Pictures . snd . foldl f (0, [])
+
 renderCalendarAsGloss cols rows year month weeday =
-  renderCalendar
-    (Pictures . snd . foldl (\(y, ps) xs -> (y - 1, Translate 0 y xs :ps)) (0, []))
-    (Pictures . snd . foldl (\(x, ps)  c -> let (w, p) = renderMonthRules c
-                                            in  (x + w, Translate x 0 p :ps)) (0, []))
+  renderCalendar (foldPics $ \(y, ps) xs -> (y - 1, Translate 0 y xs :ps))
+                 (foldPics $ \(x, ps) c -> let (w, p) = renderMonthRules c in (x + w, Translate x 0 p :ps))
     cols rows year month weeday
 
 main = display (InWindow "Render calendar!" (1080, 1080) (0,0)) white
