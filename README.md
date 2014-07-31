@@ -32,6 +32,8 @@ You can generate final calendar with something like
       weeday                     WeekDay ->
                                  t
 
+currently, the calendar has `8 * cols - 1` cells width (but `MonthHeader` has 7 cells width) then, you can compute final rasterized width easily.
+
 Example, to render a calendar to text you may define
 
     renderMonthRules cell =
